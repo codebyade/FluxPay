@@ -4,6 +4,10 @@ authors = []
 description = ""
 telemetry = true
 requirements = []
+[contracts.payment-stream-security]
+path = "contracts/payment-stream-security.clar"
+depends_on = []
+
 [contracts.streaming-payments]
 path = "contracts/streaming-payments.clar"
 depends_on = []
