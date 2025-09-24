@@ -1,26 +1,35 @@
 [project]
-name = 'flux-contract'
-description = ''
+name = "flux-contract"
 authors = []
+description = ""
 telemetry = true
-cache_dir = '.cache'
 requirements = []
-[contracts.Multi-token-payment]
-path = 'contracts/Multi-token-payment.clar'
-clarity_version = 3
-epoch = 3.0
+[contracts.core-protocol]
+path = "contracts/core-protocol.clar"
+depends_on = []
 
-[contracts.payment-stream-security]
-path = 'contracts/payment-stream-security.clar'
-clarity_version = 1
-epoch = 2.05
+[contracts.curve-module]
+path = "contracts/curve-module.clar"
+depends_on = []
 
-[contracts.streaming-payments]
-path = 'contracts/streaming-payments.clar'
-clarity_version = 1
-epoch = 2.05
+[contracts.security-module]
+path = "contracts/security-module.clar"
+depends_on = []
+
+[contracts.sip-010-trait]
+path = "contracts/sip-010-trait.clar"
+depends_on = []
+
+[contracts.token-module]
+path = "contracts/token-module.clar"
+depends_on = []
+
+[repl]
+costs_version = 2
+parser_version = 2
+
 [repl.analysis]
-passes = ['check_checker']
+passes = ["check_checker"]
 
 [repl.analysis.check_checker]
 strict = false
